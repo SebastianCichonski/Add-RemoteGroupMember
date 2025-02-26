@@ -1,5 +1,5 @@
 
-# Add-SRRemoteGroupMember.ps1
+# Add-RemoteGroupMember.ps1
 
 ## SYNOPSIS
 Skrypt do zdalnego tworzenia lokalnego użytkownika, ustawienia mu hasła i dodania do wskazanej grupy.
@@ -7,7 +7,7 @@ Skrypt do zdalnego tworzenia lokalnego użytkownika, ustawienia mu hasła i doda
 ## SYNTAX
 
 ```
-Add-SRRemoteGroupMember.ps1 [-LocalUser] <String> [-LocalGroup] <String> [<CommonParameters>]
+Add-RemoteGroupMember.ps1 [-LocalUser] <String> [-LocalGroup] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -25,7 +25,7 @@ Wymagania: Na komputerch docelowych musi być włączona usługa 'Windows Remote
 
 ### EXAMPLE 1
 ```
-Add-SRRemoteGroupMember.ps1 -LocalUser TestUser -LocalGroup administrators
+Add-RemoteGroupMember.ps1 -LocalUser TestUser -LocalGroup administrators
 ```
 
 ## PARAMETERS
@@ -78,6 +78,6 @@ Author:         Sebastian Cichonski
 
 Creation Date:  1.2024
 
-Projecturi:     https://gitlab.com/powershell1990849/add-srremotegroupmember
+Projecturi:     https://
 
 ## RELATED LINKS
