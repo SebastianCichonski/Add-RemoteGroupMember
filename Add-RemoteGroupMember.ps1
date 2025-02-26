@@ -1,19 +1,19 @@
 <#
 .SYNOPSIS
-    Skrypt do zdalnego tworzenia lokalnego u¿ytkownika, ustawienie mu has³a i dodania do wskazanej grupy.
+    Skrypt do zdalnego tworzenia lokalnego uÂ¿ytkownika, ustawienie mu hasÂ³a i dodania do wskazanej grupy.
 
 .DESCRIPTION
-    Skrypt pobiera nazwy komputerów z pliku C:\Temp\Target.txt, na ka¿dym z tych komputerów próbuje utworzyæ u¿ytkownika ustawiæ mu has³o i dodaæ do wskazanej grupy.
-    Has³o w skrypcie trzeba wstawiæ w formie zaszyfrowanego ci¹gu znaków, mo¿na go wygenerowaæ za pomoc¹ skryptu [Get-SREncryptPass.ps1] (https://gitlab.com/powershell1990849/get-srencryptpass). 
-    Nazwy komputerów na których wyst¹pi³y jakieœ b³êdy (komputer offline, has³o nie spe³nia polityki, u¿ytkownik ju¿ istnieje), s¹ zapisywane do pliku w lokalizacji C:\Temp\Target.txt,
+    Skrypt pobiera nazwy komputerÃ³w z pliku C:\Temp\Target.txt, na kaÂ¿dym z tych komputerÃ³w prÃ³buje utworzyÃ¦ uÂ¿ytkownika ustawiÃ¦ mu hasÂ³o i dodaÃ¦ do wskazanej grupy.
+    HasÂ³o w skrypcie trzeba wstawiÃ¦ w formie zaszyfrowanego ciÂ¹gu znakÃ³w, moÂ¿na go wygenerowaÃ¦ za pomocÂ¹ skryptu [Get-SREncryptPass.ps1] (https://gitlab.com/powershell1990849/get-srencryptpass). 
+    Nazwy komputerÃ³w na ktÃ³rych wystÂ¹piÂ³y jakieÅ“ bÂ³Ãªdy (komputer offline, hasÂ³o nie speÂ³nia polityki, uÂ¿ytkownik juÂ¿ istnieje), sÂ¹ zapisywane do pliku w lokalizacji C:\Temp\Target.txt,
     plik ten jest nadpisywany i wykorzystywany w kolejnym przebiegu skryptu.
 
-    Plik Target.txt mo¿emy utworzyæ za pomoc¹ polecenia: Get-ADComputer -SearchBase "Œcie¿ka do OU z komputerami" -Filter * -Properties * | Select-Object -ExpandProperty name | Set-Content -Path C:\Temp\Target.txt
+    Plik Target.txt moÂ¿emy utworzyÃ¦ za pomocÂ¹ polecenia: Get-ADComputer -SearchBase "Å’cieÂ¿ka do OU z komputerami" -Filter * -Properties * | Select-Object -ExpandProperty name | Set-Content -Path C:\Temp\Target.txt
 
-    Wymagania: Na komputerch docelowych musi byæ w³¹czona us³uga 'Windows Remote Management (WinRM) ' i otwarte porty 5985, 5986 dla ruchu przychodz¹cego. (Najwygodniej rozpropagowaæ za pomoc¹ GPO)
+    Wymagania: Na komputerch docelowych musi byÃ¦ wÂ³Â¹czona usÂ³uga 'Windows Remote Management (WinRM) ' i otwarte porty 5985, 5986 dla ruchu przychodzÂ¹cego. (Najwygodniej rozpropagowaÃ¦ za pomocÂ¹ GPO)
 
 .PARAMETER LocalUser
-    Nazwa u¿ytkownika. Parametr wymagany.
+    Nazwa uÂ¿ytkownika. Parametr wymagany.
 
 .PARAMETER LocalGroup
     Nazwa grupy. Parametr wymagany.
@@ -28,10 +28,10 @@
     Version:        1.1
     Author:         Sebastian Cichonski
     Creation Date:  1.2024
-    Projecturi:     https://gitlab.com/powershell1990849/add-srremotegroupmember
+    Projecturi:     https:/
   
 .EXAMPLE
-    Add-SRRemoteGroupMember.ps1 -LocalUser TestUser -LocalGroup administrators   
+    Add-RemoteGroupMember.ps1 -LocalUser TestUser -LocalGroup administrators   
 #>
 
 [CmdletBinding()]
